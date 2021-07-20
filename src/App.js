@@ -15,7 +15,6 @@ function App() {
 
     const handleRequestByFilters = async ()=>{
         const {stories, next_page_token} = await getByFilter(limit, language, order);
-        console.log('stories', stories)
         if(stories) {
             setStoriesData(storiesData);
             setNextToken(next_page_token);
@@ -37,7 +36,6 @@ function App() {
     },[]);
 
     useEffect( ()=>{
-        console.log(222)
         handleRequestByFilters();
     },[order, language]);
     return (

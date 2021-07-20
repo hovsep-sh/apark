@@ -4,7 +4,6 @@ import styled from "styled-components";
 import WatchListItemCont from "./WatchListItemCont";
 
 export default function List({stories, handleLoadNext, loading, setLoading}) {
-    console.log(stories);
     const listRef = useRef(null);
     const lisContRef = useRef(null);
     const handleScroll= ()=>{
